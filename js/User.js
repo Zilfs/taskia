@@ -23,6 +23,25 @@ class User {
 
     }
 
+    signInUser(usernameByInput){
+
+        const userExist = this.users.some(user => user.username.toLowerCase() === usernameByInput.toLowerCase())
+
+        if(userExist){
+
+              return{
+               success:true,
+               username
+            }; 
+        }else{
+            
+            return {
+                success:false, 
+                message:'Data is not found',
+            }
+        }
+    };
+
     getUsers() {
         return JSON.parse(localStorage.getItem('users')) || [];
     }
