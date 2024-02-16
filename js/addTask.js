@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = taskManager.saveTask(taskData);
 
         if(result.success){
-            // return window.location.href = '../signin.html';
-            alert('data is submited');
+            return window.location.href = '../tasks.html';
+            // alert('data is submited');
         }else{
             console.log('store data user procces is failed')
         }
